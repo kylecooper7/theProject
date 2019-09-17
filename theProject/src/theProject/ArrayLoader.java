@@ -1,50 +1,139 @@
-package theProject;
+package theProject; 
 
-import java.util.Scanner;
+ 
 
-public class ArrayLoader
-	{
-		static String theData[][][];{{{}}}
-		static Scanner stringInput = new Scanner(System.in);
-		static boolean categories = false;
-		static boolean commands = false;
-		static boolean synonyms = false;
-		
-		public static void Input()
-			{
-			
-			System.out.println("Input Type?");
-			String inputType = stringInput.nextLine();
-			String[] words = stringInput.nextLine().split(" ");
-			if(inputType.toLowerCase().equals("categories")) {
-			categories = true;	
-			}
-			if(inputType.toLowerCase().equals("commands")) {
-				commands = true;	
-				}
-			if(inputType.toLowerCase().equals("synonyms")) {
-				synonyms = true;	
-				}
+import java.util.Scanner; 
 
-			}
-		public static String[][][] returnArray()
-			{
+ 
 
+public class ArrayLoader 
 
-for (int x = 0; x<theData.length; x++) {
+{ 
+
+static String theData[][][] = new String[10][100][10]; 
+
+static Scanner stringInput = new Scanner(System.in); 
+
+static boolean categories = false; 
+
+static boolean commands = false; 
+
+static boolean synonyms = false; 
+
+static  int categoryCounter = 0; 
+
+static  int commandCounter = 0; 
+
+static  int synonymCounter = 0; 
+
+static int nextSpot = 0;
+
+static boolean theBreak = false;
+
+public static void InputSynonyms(int categoryIndex, int synonymIndex) 
+{
+	System.out.println("Input List of synonyms: ");
 	
-	for (int y = 0; y < theData[x].length; y++) {
-		
-		for (int z = 0; z < theData[x][y].length; z++) {
-			
-			System.out.println(theData[x][y][z]);
-			
-		}
-		
-	}
+	
+	for (int x = 0; x<theData.length; x++) { 
+		for (int y = 0; y < theData[x].length; y++) { 
+		for (int z = 0; z < theData[x][y].length; z++) { 
+
+		 
+if(theData[x][y][z].equals("")) {
+	nextSpot = z;
+	theBreak = true;
+	break;
+	
 	
 }
-return theData;
-			}
+if(theBreak) {
+	break;
+}
+		 
 
-	}
+		} 
+		if(theBreak) {
+			break;
+		}
+
+		}
+		if(theBreak) {
+			break;
+		}
+
+		} 
+	
+	
+String[] words = stringInput.nextLine().split(" ");
+for(int i = 0; i < words.length; i++) {
+theData[categoryIndex][synonymIndex][nextSpot + i] = words[i];
+}
+
+
+
+
+	
+	
+	
+	
+	
+	
+
+} 
+
+public static String[][][] returnArray() 
+
+{ 
+
+ 
+
+ 
+
+for (int x = 0; x<theData.length; x++) { 
+
+ 
+
+for (int y = 0; y < theData[x].length; y++) { 
+
+ 
+
+for (int z = 0; z < theData[x][y].length; z++) { 
+
+ 
+
+System.out.println(theData[x][y][z]); 
+
+ 
+
+} 
+
+ 
+
+} 
+
+ 
+
+} 
+
+return theData; 
+
+} 
+
+ 
+
+} 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
