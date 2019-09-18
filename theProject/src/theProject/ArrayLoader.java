@@ -30,6 +30,35 @@ static int nextSpot = 0;
 
 static boolean theBreak = false;
 
+public static void initializeArray() {
+	for (int x = 0; x<theData.length; x++) { 
+
+		 
+
+		for (int y = 0; y < theData[x].length; y++) { 
+
+		 
+
+		for (int z = 0; z < theData[x][y].length; z++) { 
+
+		 
+
+		theData[x][y][z] = "empty";
+
+		 
+
+		} 
+
+		 
+
+		} 
+
+		 
+
+		} 
+	
+}
+
 public static void InputSynonyms(int categoryIndex, int synonymIndex) 
 {
 	System.out.println("Input List of synonyms: ");
@@ -40,7 +69,7 @@ public static void InputSynonyms(int categoryIndex, int synonymIndex)
 		for (int z = 0; z < theData[x][y].length; z++) { 
 
 		 
-if(theData[x][y][z].equals("")) {
+if(theData[x][y][z].equals("empty")) {
 	nextSpot = z;
 	theBreak = true;
 	break;

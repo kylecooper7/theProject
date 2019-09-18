@@ -8,7 +8,9 @@ public class theDriver
 		public static void main(String[] args)
 			{
 				// TODO Auto-generated method stub
-				ArrayLoader.InputSynonyms(0, 0);
+				ArrayLoader.initializeArray();
+				ArrayLoader.InputSynonyms(1, 0);
+				ArrayLoader.returnArray();
 			}
 
 	}
